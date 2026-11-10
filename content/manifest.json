@@ -1,0 +1,295 @@
+{
+ "build": 1794271146752,
+ "files": [
+  {
+   "p": "assets/img/kill.png",
+   "h": "1942ed5136a2ab9d4b610d3c132a9060aa5e265246c643bf13d94db46fbac7d8",
+   "s": 67152
+  },
+  {
+   "p": "assets/img/logo.png",
+   "h": "8f8407801ac189742e499ec04ddcceca67eeadc53da8373e0d584cc0a5630ead",
+   "s": 372777
+  },
+  {
+   "p": "assets/img/report.png",
+   "h": "6116e59a2666100b0a501a43d5b66aba0a55ba64473866c9ceb5928143da9618",
+   "s": 108005
+  },
+  {
+   "p": "assets/img/sabotage.png",
+   "h": "4a961cbffb6bfd19247f4d5b00930469ec4e3df06a48d9a9705cf543a470817f",
+   "s": 67320
+  },
+  {
+   "p": "assets/img/use.png",
+   "h": "3199dc3be677b82de8e46f60c59b5aab58e096658b186511c5d10c84c17df406",
+   "s": 36661
+  },
+  {
+   "p": "assets/img/vent.png",
+   "h": "ac002e6b88611863b08a732b1dcf75492fd15db15c292291c8d6bb137f31c6f8",
+   "s": 85245
+  },
+  {
+   "p": "assets/snd/avote.mp3",
+   "h": "cff7a71d5fcb1370d8854187976b3db6cc837de0920bd4d44ae47b24545db695",
+   "s": 12736
+  },
+  {
+   "p": "assets/snd/button.mp3",
+   "h": "9c2727f6530aa5d9f771d13e5db5caba3150f2298053d0f21dcbdf69806b6a4b",
+   "s": 66957
+  },
+  {
+   "p": "assets/snd/chat.mp3",
+   "h": "6660adc6213f4a2adf4dfd4d3a4a3e30acc61ddb21ca33617ce8dd2f665d7325",
+   "s": 17900
+  },
+  {
+   "p": "assets/snd/discon.mp3",
+   "h": "b831cdc7b4e2486823aff48fb47cbc5d019eae1b221405a63d593757e9706981",
+   "s": 10201
+  },
+  {
+   "p": "assets/snd/doorclose.mp3",
+   "h": "291a0e4c35245a0040360abaf3c07243b08a0a6f0cd38ed231d910dd6459c2d8",
+   "s": 99481
+  },
+  {
+   "p": "assets/snd/dooropen.mp3",
+   "h": "afb0032eb2e93a65c3a9bad4f6650d7075194f983bbfbc77eb617ad4017df52f",
+   "s": 42478
+  },
+  {
+   "p": "assets/snd/eject.mp3",
+   "h": "4b9c97a317f6ea9c50f1c08802db0a016e922bea0a0172b2c970995f6dc26663",
+   "s": 74742
+  },
+  {
+   "p": "assets/snd/finalhide.mp3",
+   "h": "af92d8e7b96b460f410cdccc3526faa00c1665c3e573db58faabe254a67204a8",
+   "s": 235373
+  },
+  {
+   "p": "assets/snd/hover.mp3",
+   "h": "8dd99d93f214664d45f55b352c2d79ab34ef361efa805cd5e35f6c3bc5c657f6",
+   "s": 7203
+  },
+  {
+   "p": "assets/snd/join.mp3",
+   "h": "9f102bde59ef24820df960fec292b1fbaf771856e5c57c67959530430c4d68e5",
+   "s": 26210
+  },
+  {
+   "p": "assets/snd/kill.mp3",
+   "h": "ef42d94eec1a80a23555263445e6f209391c5d994175136178c7ceb79f9e86ee",
+   "s": 19089
+  },
+  {
+   "p": "assets/snd/killmusic.mp3",
+   "h": "9b6c900facfcd52c590c3d92f4f5f0d5206debf6ff4e835893c0a6fc201fb0f3",
+   "s": 83025
+  },
+  {
+   "p": "assets/snd/lockin.mp3",
+   "h": "2800fc2e584cfa5b681cb37088bc10bc77f793684c254bf8b1d986610ab9dd4a",
+   "s": 34551
+  },
+  {
+   "p": "assets/snd/music_lobby.mp3",
+   "h": "715b6fb273d73099c3b5b0c635ef7bb2d52d26fd16bf1a78622d47b7382af900",
+   "s": 1109500
+  },
+  {
+   "p": "assets/snd/music_menu.mp3",
+   "h": "c23fb49b1ac6c8ea1acedb328ffbeed84a1311185c39c2c45aa045cb793443bb",
+   "s": 2049027
+  },
+  {
+   "p": "assets/snd/music_radio.mp3",
+   "h": "76004ab88ac9e9c3485c28f1f7ed949225013121e57b40bb8828d18c52a4b60e",
+   "s": 540350
+  },
+  {
+   "p": "assets/snd/music_ship.mp3",
+   "h": "1cd7bf797edad2333673e77f562e356678b5e48ff61a315148f6999b87a7a717",
+   "s": 2276589
+  },
+  {
+   "p": "assets/snd/report.mp3",
+   "h": "630d6eb2fc93c01d03bdf39f7b2699374e9b742fc081463260d0451f642a0445",
+   "s": 102037
+  },
+  {
+   "p": "assets/snd/roleC.mp3",
+   "h": "ccc6749c06e2361c1f15b028bff39873ce710282462ccbb38dbca4ad3bf751a8",
+   "s": 161579
+  },
+  {
+   "p": "assets/snd/roleI.mp3",
+   "h": "1f389458c493868719c85ecc2caa5c0d434add73940bbb9f6cdf9f936bf92f80",
+   "s": 237306
+  },
+  {
+   "p": "assets/snd/sabotage.mp3",
+   "h": "9809de2c3b142a537bba257fccd30a28fb9a89a5b64b66d5592067f3c17bb0ce",
+   "s": 256627
+  },
+  {
+   "p": "assets/snd/scan.mp3",
+   "h": "f5bd3849cfe7db36b3d4d4c714b45c09800640dca57549fce935af258f7cce39",
+   "s": 308864
+  },
+  {
+   "p": "assets/snd/select.mp3",
+   "h": "2533e2373356531af17519721f35258149af873a1b06d05286fb3199bc956dc2",
+   "s": 14511
+  },
+  {
+   "p": "assets/snd/start.mp3",
+   "h": "f1764f84ffa725e783c5b7e641c05a2e75aa8ede3fc18c50271ae25f23751a09",
+   "s": 142106
+  },
+  {
+   "p": "assets/snd/step.mp3",
+   "h": "2405d1089696d8089b406c97489fce313e3111b033079c7fdbd56d932bd2bdc9",
+   "s": 11739
+  },
+  {
+   "p": "assets/snd/taskdone.mp3",
+   "h": "9298fb953bfde7ec1599e1f96a8c55bf028e5c41900c71544761b93ce9b3b9e7",
+   "s": 45828
+  },
+  {
+   "p": "assets/snd/taskprog.mp3",
+   "h": "f4b91a0a4a40d0fa5ecd6872539ebf55d200912a3f6c18ec19d60ef9a311499a",
+   "s": 46875
+  },
+  {
+   "p": "assets/snd/vent1.mp3",
+   "h": "407cda796fbd411f813965835e95c0fc01d7d8e8f013980a09ab48769eff2129",
+   "s": 43323
+  },
+  {
+   "p": "assets/snd/vent2.mp3",
+   "h": "50df0fc8010b17b3aeeb9078d641046d920c03f4e3239e491538d98481b1a81e",
+   "s": 34764
+  },
+  {
+   "p": "assets/snd/vent3.mp3",
+   "h": "931fb274f860a1b29a74132e1c1f2b740126ffc11c976c80c24fa7aa343dd299",
+   "s": 37116
+  },
+  {
+   "p": "assets/snd/ventopen.mp3",
+   "h": "cb077e16a9cdeb4b644b490247793a29a5b2f03191f2efcb2bc7e8d6c569405c",
+   "s": 49264
+  },
+  {
+   "p": "assets/snd/votedead.mp3",
+   "h": "8aa7f200b614a8f7dc88cc14239d4827f2388870eec8210d4663122cab11977c",
+   "s": 86631
+  },
+  {
+   "p": "assets/snd/votetimer.mp3",
+   "h": "d82569884382be01b77b4eb548182b4fb4f34b7274035365a9bdcfb3b999dd9f",
+   "s": 9238
+  },
+  {
+   "p": "assets/snd/wificlose.mp3",
+   "h": "9f38414821cc46067d5319cb93e39cc834efb5ba7caae6151fb8181bd6f6410d",
+   "s": 10515
+  },
+  {
+   "p": "assets/snd/wifiopen.mp3",
+   "h": "007a2cf41ebae70a6f3e26bb997f7f3a4940123c246474841f80c047065f7a4e",
+   "s": 21931
+  },
+  {
+   "p": "assets/snd/wifislider.mp3",
+   "h": "8ee4cbc0f83cd916179f0b0a000597c327d67d2d1df92b7adfe6f9109ac58529",
+   "s": 8846
+  },
+  {
+   "p": "assets/snd/wire1.mp3",
+   "h": "f0b80fe195d986cbb7db20311978a5dbb99c8088113b66e83b7cb571fa3a90dd",
+   "s": 14216
+  },
+  {
+   "p": "assets/snd/wire2.mp3",
+   "h": "566a4f14d858bc8155812bbfee3ef92371ad8ef8c9875ddd40352284886f1e84",
+   "s": 27011
+  },
+  {
+   "p": "assets/snd/wire3.mp3",
+   "h": "14c8628c01686464fe8ba012cb1ccdb2906e26e1bcc73b2e4cc071372a723925",
+   "s": 13224
+  },
+  {
+   "p": "assets/snd/wiresclose.mp3",
+   "h": "4cc2f3a189be649f63b12be9eb7315b5dae877b20af0a692f43f6e788c8ee98d",
+   "s": 16876
+  },
+  {
+   "p": "assets/snd/wiresopen.mp3",
+   "h": "062ed72463042289f0ccb1833027255889323ddde87891044d1e925893b59af0",
+   "s": 14272
+  },
+  {
+   "p": "index.html",
+   "h": "91accc64de0987f290fddfa2bb3d40833692abf3875961eb39e637868bad6922",
+   "s": 9307
+  },
+  {
+   "p": "js/app.js",
+   "h": "7837a605677563ce52b34ba269d99351b742f081ab40a8e708ec7805ea27c505",
+   "s": 14614
+  },
+  {
+   "p": "js/client.js",
+   "h": "cb946935c8b42974015cb1f7fb109de45e7fd44c2dae3eaecf69dbd21f51aa91",
+   "s": 10628
+  },
+  {
+   "p": "js/draw.js",
+   "h": "62389a583c82ee4761226a0782b5f394f1b5af29b0416f69c44a86b4cd685b3b",
+   "s": 27387
+  },
+  {
+   "p": "js/host.js",
+   "h": "e06487acfe6173af89a7d37e40e8d3f58cd011a2deef11df9eeef74dd5cf9ee5",
+   "s": 11900
+  },
+  {
+   "p": "js/ui.js",
+   "h": "6d481bd340c5afded178ba4761bedf19f1208bc29824a83bfe484579f35a8ed5",
+   "s": 31147
+  },
+  {
+   "p": "js/util.js",
+   "h": "df92b1bc8d9b31df40ec10a0017608fb73a55d8910afd803fbc9e349570aea2c",
+   "s": 6491
+  },
+  {
+   "p": "js/voice.js",
+   "h": "d17266f3534c40bf4e80fefa9ad8a0bdb2be5ef97da52cff33715435b6ef1329",
+   "s": 5684
+  },
+  {
+   "p": "net.js",
+   "h": "c7a9d95bf0aaa4397c5eb7dbb7d7c33775ed98d87e36cecb0092c6f18da1d799",
+   "s": 8407
+  },
+  {
+   "p": "style.css",
+   "h": "b048c09f6ba738ba19b6e5e0543f411319d5a7752745ba4ab95dc8bf4148aa23",
+   "s": 25005
+  },
+  {
+   "p": "vendor/peerjs.min.js",
+   "h": "7604d8c31bec4f134b0d15c2d80b1d095ea18af005354f439f14291fcd7b4168",
+   "s": 86948
+  }
+ ]
+}

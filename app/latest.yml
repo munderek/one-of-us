@@ -1,0 +1,8 @@
+version: 2.1.0
+files:
+  - url: One-of-Us-Setup.exe
+    sha512: rZdxdj4sBHf9hRJuwuNRfYH0rT8v/U1YZuYPhR/814yfampbkYz9GVr07FwrejLJj+qTZF2nSFXmtnBNlCoPdQ==
+    size: 92390693
+path: One-of-Us-Setup.exe
+sha512: rZdxdj4sBHf9hRJuwuNRfYH0rT8v/U1YZuYPhR/814yfampbkYz9GVr07FwrejLJj+qTZF2nSFXmtnBNlCoPdQ==
+releaseDate: '2026-11-10T00:40:52.832Z'

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>One of Us</title>
+<link rel="stylesheet" href="style.css">
+<script>setTimeout(function(){if(document.body)document.body.classList.add('ready')},3500)</script>
+</head>
+<body>
+<div id="stage">
+ <canvas id="cv"></canvas>
+
+ <div id="menu" class="layer">
+  <div id="mMain" class="scr">
+   <img id="logo" src="assets/img/logo.png" alt="One of Us">
+   <div class="mgrid">
+    <button class="ob" id="bLan">LOKALNY</button>
+    <button class="ob" id="bOnline">ONLINE</button>
+    <button class="ob" id="bHow">JAK GRAĆ</button>
+    <button class="ob" id="bSet">USTAWIENIA</button>
+   </div>
+   <div id="mmsg"></div>
+   <div class="ver">v2.0</div>
+  </div>
+
+  <div id="mOnline" class="scr hide"><div class="orows">
+   <div class="orow"><div class="oc"><img data-ic="0"></div><div class="ot">HOSTUJ</div><button class="ob sm" id="bHostRow">Stwórz grę</button></div>
+   <div class="orow"><div class="oc"><img data-ic="1"></div><div class="ot">PUBLICZNE</div><button class="ob sm" id="bPubRow">Znajdź grę</button></div>
+   <div class="orow"><div class="oc"><img data-ic="2"></div><div class="ot">PRYWATNE</div><button class="ob sm" id="bPrivRow">Wpisz kod</button></div>
+   <button class="ob sm back" id="bBack1">WRÓĆ</button>
+  </div></div>
+
+  <div id="mCreate" class="scr hide"><div class="pn">
+   <h2>STWÓRZ GRĘ</h2>
+   <div class="row"><span>Gra publiczna (widoczna na liście)</span><div class="tg" id="tgPub"></div></div>
+   <button class="ob" id="bCreate">STWÓRZ</button>
+   <button class="ob sm" id="bBackC">WRÓĆ</button>
+   <div class="err" id="crErr"></div>
+  </div></div>
+
+  <div id="mPublic" class="scr hide"><div class="pn" style="width:760px">
+   <h2>PUBLICZNE GRY</h2>
+   <div id="pubList"></div>
+   <button class="ob sm" id="bBackP">WRÓĆ</button>
+   <div class="err" id="pubErr"></div>
+  </div></div>
+
+  <div id="mLogin" class="scr hide"><div class="pn">
+   <h2>WITAJ!</h2>
+   <div class="lbl">Jak mamy Cię nazywać w grze?</div>
+   <input class="in" id="lgn" maxlength="12" autocomplete="off" spellcheck="false">
+   <button class="ob" id="bLogin">ZAPISZ I GRAJ</button>
+   <div class="err" id="lgErr"></div>
+  </div></div>
+  <div id="who" class="hide">Zalogowano jako: <b id="whoN"></b> <button id="bWho">zmień</button></div>
+
+  <div id="mLan" class="scr hide"><div class="pn" style="width:620px">
+   <h2>LOKALNY (TA SAMA SIEĆ)</h2>
+   <button class="ob" id="bLanHost">ZAŁÓŻ GRĘ LOKALNĄ</button>
+   <div class="lbl">Gry znalezione w Twojej sieci</div>
+   <div id="lanList"></div>
+   <div class="lbl">albo wpisz adres IP hosta</div>
+   <div class="iprow"><input class="in" id="lanIp" placeholder="np. 192.168.0.12" autocomplete="off" spellcheck="false"><button class="ob sm" id="bLanJoin">DOŁĄCZ</button></div>
+   <button class="ob sm" id="bBackL">WRÓĆ</button>
+   <div class="err" id="lanErr"></div>
+  </div></div>
+
+  <div id="mJoin" class="scr hide"><div class="pn">
+   <h2>WPISZ KOD GRY</h2>
+   <input class="in" id="jcode" maxlength="5" autocomplete="off" spellcheck="false" style="font-size:54px;letter-spacing:14px;text-transform:uppercase">
+   <button class="ob" id="bJoinGo">DOŁĄCZ</button>
+   <button class="ob sm" id="bBack2">WRÓĆ</button>
+   <div class="err" id="jErr"></div>
+  </div></div>
+
+  <div id="mHow" class="scr hide"><div class="pn" style="width:820px">
+   <h2>JAK GRAĆ</h2>
+   <div class="help">
+    <b>WASD / strzałki</b> ruch &nbsp; <b>E / Spacja</b> użyj &nbsp; <b>R</b> zgłoś ciało &nbsp; <b>Q</b> zabij &nbsp; <b>V</b> szyb &nbsp; <b>F</b> następny szyb &nbsp; <b>ESC</b> menu<br>
+    <b>M</b> wycisz mikrofon &nbsp; <b>T</b> (domyślnie) mów w trybie „naciśnij i mów”<br><br>
+    <b>Klasyczny:</b> załoga robi zadania, impostorzy zabijają i sabotują (światła, komunikacja, drzwi). Zgłoś ciało albo użyj przycisku w stołówce, pogadaj na czacie i zagłosuj.<br>
+    <b>Chowany:</b> poszukiwacze są przez 15 s ślepi i widzą niewiele. Załoga się ukrywa do końca czasu lub robi zadania.<br>
+    <b>Infekcja:</b> zabity staje się impostorem. Załoga przetrwa do końca czasu lub skończy zadania.<br><br>
+    <b>Online:</b> host zakłada grę i podaje 5-znakowy kod. <b>Lokalny:</b> gra w tej samej sieci, bez kodu - host jest widoczny na liście.
+   </div>
+   <button class="ob sm" id="bBack3">WRÓĆ</button>
+  </div></div>
+ </div>
+
+ <div id="hudw" class="layer hide">
+  <div id="ping" class="hide"></div>
+  <div id="side">
+   <button class="rb" id="bGear" title="Ustawienia"><svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><circle cx="16" cy="16" r="6.5"/><path d="M16 3v4.5M16 24.5V29M3 16h4.5M24.5 16H29M6.8 6.8l3.2 3.2M22 22l3.2 3.2M25.2 6.8L22 10M10 22l-3.2 3.2"/></g></svg></button>
+   <button class="rb" id="bChat" title="Czat"><svg viewBox="0 0 32 32"><path d="M5 7h22v14H15l-6 5v-5H5z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><i id="chatDot" class="hide"></i></button>
+   <button class="rb hide" id="bMic" title="Mikrofon (M)"><svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="12" y="4" width="8" height="15" rx="4"/><path d="M7 15a9 9 0 0 0 18 0M16 24v4"/></g><path id="micX" d="M5 5L27 27" stroke="#ff4d4d" stroke-width="3.5" stroke-linecap="round" class="hide"/></svg></button>
+  </div>
+
+  <div id="lobby" class="layer hide">
+   <div class="top" id="rcode"></div>
+   <div id="pcount"></div>
+   <div id="lobBot">
+    <div id="lobMsg"></div>
+    <button id="bStart" class="startb hide"><svg viewBox="0 0 320 120"><path class="sh" d="M14 20 L232 20 L306 60 L232 100 L14 100 Z"/><text x="150" y="78" text-anchor="middle" class="stx">START</text></svg></button>
+    <div id="waitTxt" class="hide">Czekaj, aż host rozpocznie grę</div>
+   </div>
+   <div id="custom" class="ovl cus hide">
+    <div class="cbar"><button class="cx" id="bCustomX">X</button><div class="ctabs"><button class="ct on" data-ct="0" title="Kolory"><i class="rain"></i></button><button class="ct" data-ct="1" title="Kosmetyki"><img id="ctHat" alt=""></button></div></div>
+    <div class="cmain"><div class="cleft"><div class="ctitle" id="ctitle">KOLORY</div><div id="cgrid"></div></div>
+     <div class="cright"><img id="cprev" alt=""><div id="cname"></div><div id="ceq">ZAŁOŻONY</div></div></div>
+   </div>
+   <div id="gset" class="ovl hide"><div class="pn" style="width:700px"><h2>USTAWIENIA GRY</h2><div id="gmode"></div><div id="gdesc"></div><div id="grows"></div><button class="ob sm" id="bGsetX">ZAMKNIJ</button></div></div>
+  </div>
+
+  <div id="game" class="layer hide">
+   <div id="pbarw"><div id="pfill"></div><span id="ptxt">Postęp zadań</span></div>
+   <div id="tlist"></div>
+   <div id="tmr"></div>
+   <div id="sabwrap"><div id="sabbar" class="hide"></div></div>
+  </div>
+
+  <div id="ab">
+   <button class="ab" id="bVm">DALEJ<small>F</small></button>
+   <button class="ab ic" id="bVent"><img src="assets/img/vent.png" alt=""><small id="ventlbl">V</small></button>
+   <button class="ab ic" id="bSab"><img src="assets/img/sabotage.png" alt=""><small id="sabcd">SABOTAŻ</small></button>
+   <button class="ab ic" id="bKill"><img src="assets/img/kill.png" alt=""><small id="killcd">Q</small></button>
+   <button class="ab ic" id="bRep"><img src="assets/img/report.png" alt=""><small>R</small></button>
+   <button class="ab ic" id="bUse"><img src="assets/img/use.png" alt=""><small>UŻYJ (E)</small></button>
+  </div>
+  <div id="sabm" class="pn hide"></div>
+ </div>
+
+ <div id="meet" class="hide"><div id="mframe">
+  <div id="mtitle"></div><div id="mtimer"></div>
+  <div id="mgrid"></div>
+  <div id="mskipv"></div>
+  <button id="mskip" class="ob">POMIŃ GŁOSOWANIE</button>
+ </div></div>
+
+ <div id="chat" class="hide"><div id="clog"></div><div id="cin"><input id="ctext" maxlength="100" placeholder="Napisz wiadomość..." autocomplete="off"><button id="csend">WYŚLIJ</button></div></div>
+
+ <div id="end" class="hide"><div id="endt"></div><div id="endl"></div></div>
+ <div id="task" class="hide"><div id="tbox"><h3 id="ttitle"></h3><div id="tbody"></div><button class="ob sm" id="tclose">ZAMKNIJ</button></div></div>
+
+ <div id="setov" class="hide"><div class="pn" id="setpn"><h2>USTAWIENIA</h2><div id="settabs"></div><div id="setbody"></div><div class="setft"><button class="ob sm" id="bSetClose">WZNÓW</button><button class="ob sm danger hide" id="bLeave">OPUŚĆ GRĘ</button></div></div></div>
+
+ <div id="rep" class="hide"></div>
+ <div id="splash" class="hide"><div id="spin"></div></div>
+ <div id="recon" class="hide"><div>Ponowne łączenie z grą...</div></div>
+ <div id="toasts"></div>
+ <div id="boot"><img src="assets/img/logo.png" alt=""><div class="bar"><div></div></div></div>
+</div>
+<script>(function(){var s=Math.min(innerWidth/1280,innerHeight/720);document.getElementById('stage').style.transform='translate(-50%,-50%) scale('+s+')'})()</script>
+<script src="vendor/peerjs.min.js"></script>
+<script src="net.js"></script>
+<script src="js/util.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/host.js"></script>
+<script src="js/client.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
